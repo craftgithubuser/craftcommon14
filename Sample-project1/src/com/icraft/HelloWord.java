@@ -7,6 +7,7 @@ public class HelloWord {
 
 		System.out.println("Hello world from batch 26");
 		
+		System.out.println("Okay");
 	}
 
 }
