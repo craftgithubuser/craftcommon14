@@ -1,2 +1,9 @@
 I am sorry but finally, get it! 
+<<<<<<< HEAD
+I am adding another sentence. Thank you!
+Git desktop :) ....
+=======
 I am adding another sentence. Thank you! hello
+>>>>>>> 86a252627f81da3de9c5793d10b710f80b002a57
+
+And now???
