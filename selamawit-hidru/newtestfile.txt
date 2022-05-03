@@ -6,3 +6,5 @@ qa
 ready to pack
 
 deliver to the costumer
+
+added in new spread shit 
