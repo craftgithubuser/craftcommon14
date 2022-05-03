@@ -8,6 +8,7 @@ public class Project_1 {
        System.out.println("Hello World");
        System.out.println("Hello Class");
        System.out.println("Hello batch 26");
+       System.out.println("Hello batch 26");
 	}
 
 }
