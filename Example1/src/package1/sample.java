@@ -6,15 +6,9 @@ public class sample {
 		// TODO Auto-generated method stub
         System.out.println("print something");
         System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print something");
-        System.out.println("print newthing");
-        System.out.println("print newthing");
+        System.out.println("something intersting");
+        
+        
 	}
 
 }
