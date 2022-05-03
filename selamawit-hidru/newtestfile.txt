@@ -3,3 +3,6 @@ step one
 step two
 computrance
 qa
+ready to pack
+
+deliver to the costumer
