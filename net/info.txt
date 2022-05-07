@@ -1,0 +1,5 @@
+<<<<<<< Updated upstream
+computer class
+=======
+hello everyone
+>>>>>>> Stashed changes
