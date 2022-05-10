@@ -65,6 +65,16 @@ where Cust_ID = 555;
 Delete from customer_table
 where Cust_ID = '656';
 
+select all  studentname
+from customer table,
+where Cust_ID, Cust_firstName
+
+select*
+from customer_table
+where cust_country = 'Ethiopia';
+
+
+
 
 
 
