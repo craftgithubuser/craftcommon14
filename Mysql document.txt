@@ -1,0 +1,32 @@
+Database3
+
+
+create schema studentsInfo;
+
+use studentsInfo;
+create table students(
+studentid int not null,
+studentName varchar(255) not null,
+parentName varchar(50) not null,
+Adress varchar(25) not null,
+Postalcode int not null,
+
+City varchar(40) not null,
+primary key(studentid)
+
+);
+drop table Gau,
+
+-- drop table students;
+-- ALTER table sudents;
+-- ADD PRIMARY KEY (studentid)
+alter table students
+add studentAge int not null;
+alter table students
+
+modify column Postalcode int;
+alter table students
+
+drop column studentAge; 
+insert into students(studentid, studentName, parentName, Adress, Postalcode, City)
+values (  "1234", "Zinash", "Gua", "1313 west", "55116",  "St paul")
