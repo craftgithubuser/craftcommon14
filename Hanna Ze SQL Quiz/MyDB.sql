@@ -65,13 +65,75 @@ where Cust_ID = 555;
 Delete from customer_table
 where Cust_ID = '656';
 
-select all  studentname
-from customer table,
-where Cust_ID, Cust_firstName
+-- display all records from the table
 
-select*
+select * from MyDB.Customer_table;
+
+select *
 from customer_table
 where cust_country = 'Ethiopia';
+
+select *
+from customer_table
+where cust_salary>'5000000';
+
+select cust_firstName, cust_lastname, cust_country
+from customer_table
+where cust_gender = 'M';
+
+select distinct cust_country from customer_table;
+
+select cust_firstName, cust_lastname, cust_country
+from customer_table
+where cust_gender = 'F'
+order by cust_country desc;
+
+select * from customer_table
+where cust_gender ='F'and
+cust_salary >'2000000'and
+cust_country = 'Ethiopia';
+
+select * from customer_table
+where cust_country = 'Ethiopia' or 
+cust_country = 'Uzbekistan';
+
+select min(cust_salary)
+from customer_table;
+
+select max(cust_salary)
+from customer_table;
+
+select count(*)
+from customer_table;
+
+select avg(cust_salary)
+from customer_table;
+
+select sum(cust_salary)
+from customer_table;
+
+select * 
+from customer_table
+where cust_salary between 2000000 and 8000000 ;
+
+select * 
+from customer_table
+where cust_Firstname like 's%';
+
+select * 
+from customer_table
+where cust_Firstname like '_e%'
+and cust_Lastname like '%e';
+
+select * 
+from customer_table
+where cust_Lastname like 'p%a';
+
+select * from customer_table
+where cust_country in ('Ethiopia','USA','France');
+
+
+
 
 
 
