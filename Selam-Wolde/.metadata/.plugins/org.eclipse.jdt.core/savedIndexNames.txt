@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\munet\Documents\craftcommon14\Selam-Wolde\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2522271279.index
+1697782439.index
