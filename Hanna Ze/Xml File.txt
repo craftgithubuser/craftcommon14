@@ -1,0 +1,8 @@
+<names>
+  <first name> Hanna </first name>
+<<<<<<< HEAD
+  <last name> Zem </last name>
+=======
+  <last name> Zemi </last name>
+>>>>>>> f4b16b48be47b9fc6ce6403b11355c6f37c91774
+</names>
