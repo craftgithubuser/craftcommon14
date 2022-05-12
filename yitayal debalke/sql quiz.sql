@@ -67,3 +67,62 @@ where Cust_ID in
 
 delete from Customers
 where Cust_ID= 666;
+
+/*
+1. select * from mydb.Customers; 
+
+2.select * from Customers 
+where  = "Ethiopia";
+
+3.select * 
+where Cust_Salary >"5000000";
+
+4. select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where Cust_Gender = "M";
+
+5. select distinct  from Customers;
+
+6. select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where Cust_Gender = "F"
+order by Cust_Country desc;
+
+7. select * from Customers 
+where Cust_Gender = "F" and Cust_Salary >"2000000" and 
+Cust_Country = "Ethiopia";
+
+8. .  select* from Customers
+where Cust_Country = "Ethiopia" or  Cust_Country = "Uzbekistan";
+ 
+ 9. select min(Cust_Salary) from Customers;
+ 
+ 10. select max(Cust_Salary) from Customers;
+ 
+ 11. select count(Cust_ID) from Customers;
+ select count(*) as no_customer from Customers;
+ 
+12.  select avg(Cust_Salary) from Customers;
+
+13. select sum(Cust_Salary) from Customers;
+
+14.  select * from Customers
+where Cust_Salary between "2000000" and "8000000";
+
+15. select * from Customers
+where Cust_FirstName like 's%';
+
+16. select * from Customers
+where Cust_FirstName like '_e%' 
+and  Cust_LastName like '%e';
+
+17. select * from Customers
+where Cust_LastName like 'p%a';
+
+18. select * from Customers
+where Cust_Country in
+( "Ethiopia", "USA", "France");
+
+
+*/
+
+
+
