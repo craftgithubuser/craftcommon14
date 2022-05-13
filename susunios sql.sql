@@ -1,107 +1,127 @@
-create schema studentinfo1;
-use studentinfo1;
+create database MyDB;
 
-create table students1(
-studentsID int not null primary key,
-studentsname varchar(50)not null,
-parentname varchar(50) not null,
-address varchar(49) not null,
-postalcode int,
-city varchar(56) not null
+use mydb;
+
+create table customers(
+Cust_ID int auto_increment not null,
+Cust_FirstName varchar(255) not null,
+Cust_LastName varchar(255) not null,
+Cust_NickName varchar(255),
+Cust_Age int,
+Cust_Gender char(1) not null,
+Cust_Country varchar(255) not null,
+Cust_Salary dec not null,
+primary key (Cust_ID)
 );
-drop table students1; 
 
-alter table students1
-add studentsage int not null;
-alter table students1
-modify column postalcode int;
-alter table students1
-drop column  studentsage;
-alter table students1
-add check(studentsID>0);
-alter table students1
-add country varchar(255)not null;
-alter table students1 
-add fee int not null;
+alter table customers
+add column bonus int not null;
+ 
+alter table customers
+modify Cust_Age int not null;
 
-INSERT INTO students1(studentsID,StudentsName, ParentName, Address, PostalCode, City,  Country, fee)
-VALUES ('1', 'khalifa','Yohannes', '01-RG Road',  1000, 'Addis Ababa', 'Ethiopia', 42145);
- 
- INSERT INTO students1
- VALUES (2, 'Nabiha', 'Amir', 'Queens Quay',  416, 'Toronto', 'Canada', 45672),
- ('3', 'Amanuel', 'Negash', 'Mayo Road',  27460, 'Rio Claro', 'Brazil',65432),
- ('4', 'Chala', 'Baheru', 'silver spring',  1000, 'Maryland', 'USA', 65432),
- ('5','Henok', 'Mamo', 'Gangnam Street',  135081, 'Seoul', 'South Korea', 23653);
- 
- 
- 
- update students1 
- set studentsname = 'susunios',city='dessie'
- where studentsID='1';
- 
- delete from students1
- where studentsID ='6';
- 
- update students1
- set country ='germany'
- where studentsID='2';
- select studentID,studentname,address,country
- from students1;
- 
- select *
- from studens1;
- 
- select 
- max(fee)as 'highest fee'
- from students1
- where country='usa';
- 
- select min(fee) as smallestselary
- from students1;
- 
- select max(fee) as smallestfees
- from students1;
-use studentinfo1;
-select min(fee) as smallestfees
-from students1;
+alter table customers
+drop Cust_NickName;
 
-select count(studentsID)
-from students1;
-select avg(fee)
-from students1;
-select sum(fee)
-from students1;
-select sum(fee)
-from students1
-where country='ethiopia';
-select *
-from students1
-where fee between 20000 and 40000;
-select *
-from students1
-where address is null;
-select *
- from students1
-where address is not null;
+alter table customers
+drop bonus;
+
+rename table 
+customers to customer;
+
+drop table customer;
+
+drop database MyDB;
+
+create database MyDB;
+
+use mydb;
+
+create table customers(
+Cust_ID int auto_increment not null,
+Cust_FirstName varchar(255) not null,
+Cust_LastName varchar(255) not null,
+Cust_NickName varchar(255),
+Cust_Age int,
+Cust_Gender char(1) not null,
+Cust_Country varchar(255) not null,
+Cust_Salary dec not null,
+primary key (Cust_ID));
+
+
+insert into customers (Cust_ID, Cust_FirstName, Cust_LastName, Cust_Age,  Cust_Gender, Cust_Country, Cust_Salary)
+values (111, "Nick", "Jones", 26, "M", "USA", 20000000),
+(222, "Antony", "Martial", 24, "M", "France", 10000000),
+(333, "Nebiha", "Amir", 24, "F", "Uzbekistan",36000000),
+(444, "Soresa", "Hailu", 24, "M", "Unkown", 34000000),
+(555, "Beka", "Haile", 25, "M", "Kazakhstan", 400000),
+(999, "Nick", "Jones", 26, "M", "USA", 20000000),
+(777, "Poul", "Pogba", 26, "M", "France",20000000),
+(888, "Betty", "G", 27, "F", "Ethiopia", 70000000);
+
+update customers
+set  Cust_Country="Ethiopia"
+where Cust_ID in
+(333,444,555);
+
+
+delete from Customers
+where Cust_ID= 666;
+
+
+ select * from mydb.Customers; 
+
 select * 
-from students1
-where studentsname like 'c%';
-select *
-from students1
-where studentsname like '%s';
-select *
-from students1
-where studentsname like '%and%';
+from Customers 
+where cust_country = "Ethiopia";
 
-select *
-from students1
-where studentsname like 's_%_%';
-select *
-from students1
-where studentsname like 's%u';
-select *
-from students1 
-where country in ('ethiopia','usa');
-select *
-from students1
-where st
+select * 
+from customers
+where Cust_Salary >"50000";
+
+ select  Cust_FirstName, Cust_LastName, Cust_Country 
+ from Customers
+where Cust_Gender = "M";
+
+ select distinct 
+ from Customers;
+
+ select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where Cust_Gender = "F"
+order by Cust_Country desc;
+
+ select * from Customers 
+where Cust_Gender = "F" and Cust_Salary >"2000000" and 
+Cust_Country = "Ethiopia"
+
+  select*
+  from Customers
+where Cust_Country = "Ethiopia" or  Cust_Country = "Uzbekistan";
+ 
+  select min(Cust_Salary) from Customers;
+ 
+  select max(Cust_Salary) from Customers;
+ 
+  select count(Cust_ID) from Customers;
+ select count(*) as no_customer from Customers;
+ 
+ select avg(Cust_Salary) from Customers;
+
+ select sum(Cust_Salary) from Customers;
+
+ select * from Customers
+where Cust_Salary between 2000000 and 8000000;
+
+ select * from Customers
+where Cust_FirstName like 's%';
+
+ select * from Customers
+where Cust_FirstName like '_e%' 
+and  Cust_LastName like '%e';
+
+ select * from Customers
+where Cust_LastName like 'p%a';
+
+ select * from Customers
+where Cust_Country in
+( "Ethiopia", "USA", "France");
