@@ -1,0 +1,5 @@
+SELECT * FROM MyDB.Customers;
+use MyDB;
+
+ALTER TABLE Customers AUTO_INCREMENT=10;
+

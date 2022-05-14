@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+computer class
+=======
 <<<<<<< Updated upstream
 computer class
 =======
 hello everyone
 >>>>>>> Stashed changes
+>>>>>>> f4b16b48be47b9fc6ce6403b11355c6f37c91774
