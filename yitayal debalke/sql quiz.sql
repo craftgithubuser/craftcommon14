@@ -67,3 +67,104 @@ where Cust_ID in
 
 delete from Customers
 where Cust_ID= 666;
+
+/*
+1. select * from mydb.Customers; 
+
+2.select * from Customers 
+where  = "Ethiopia";
+
+3.select * 
+where Cust_Salary >"5000000";
+
+4. select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where Cust_Gender = "M";
+
+5. select distinct  from Customers;
+
+6. select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where Cust_Gender = "F"
+order by Cust_Country desc;
+
+7. select * from Customers 
+where Cust_Gender = "F" and Cust_Salary >"2000000" and 
+Cust_Country = "Ethiopia";
+
+8. .  select* from Customers
+where Cust_Country = "Ethiopia" or  Cust_Country = "Uzbekistan";
+ 
+ 9. select min(Cust_Salary) from Customers;
+ 
+ 10. select max(Cust_Salary) from Customers;
+ 
+ 11. select count(Cust_ID) from Customers;
+ select count(*) as no_customer from Customers;
+ 
+12.  select avg(Cust_Salary) from Customers;
+
+13. select sum(Cust_Salary) from Customers;
+
+14.  select * from Customers
+where Cust_Salary between "2000000" and "8000000";
+
+15. select * from Customers
+where Cust_FirstName like 's%';
+
+16. select * from Customers
+where Cust_FirstName like '_e%' 
+and  Cust_LastName like '%e';
+
+17. select * from Customers
+where Cust_LastName like 'p%a';
+
+18. select * from Customers
+where Cust_Country in
+( "Ethiopia", "USA", "France");
+
+*/
+
+
+use mydb;
+create table Address(
+Cust_Zip varchar(255) not null,
+Cust_Street varchar(255) not null,
+Cust_City varchar(255) not null,
+Cust_state varchar(255),
+Customer_ID int ,
+primary key (Cust_Zip),
+foreign key (Customer_ID) references customers (cust_id)
+);
+
+insert into Address (Cust_Zip, Cust_Street,Cust_City, Cust_state, Customer_ID)
+values (1000, 'megenagn', 'Addis Ababa', 'Addis Ababa', 444),
+(2000, '4-kilo', 'Addis Ababa', 'Addis Ababa', 555),
+(3000, '41-eyesus', 'Addis Ababa', 'Addis Ababa', 888),
+(4000, '6-kilo', 'Addis Ababa', 'Addis Ababa', 333),
+(5000, '01-st', 'San Diego', 'California', null),
+(6000, 'kU-road', 'Los Angeles', 'California', null),
+(7000, 'JK-road', 'Miami', 'Florida', null),
+(8000, 'Lj-road', 'Atlanta', 'Georgia', null);
+
+select *
+from customers c inner join Address A
+on c.cust_id= A.Customer_ID;
+
+select *
+from customers c left outer join Address A
+on c.cust_id= A.Customer_ID;
+
+select *
+from customers c right outer join Address A
+on c.cust_id= A.Customer_ID;
+
+-- we are making full outer join
+
+select *
+from customers c right outer join Address A
+on c.cust_id= A.Customer_ID
+union
+select *
+from customers c left outer join Address A
+on c.cust_id= A.Customer_ID;
+
+
