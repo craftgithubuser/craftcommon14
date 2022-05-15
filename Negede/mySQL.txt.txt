@@ -1,0 +1,155 @@
+1.select*from mydb. customers;
+2.select *from customer;
+where cust_counrty='Ethiopia'
+3.select * from customers 
+where cust_salary >"5000000" ;
+4. select cust_firstname, cust_lastname,cust_country from customers;
+5. select distinct cust_ country from customers
+where Cust_Gender="M";
+6.select cust_firstname, cust_lastname,cust_country from customers
+where Cust_Gender="F'
+order by cust_country desc;
+7. select* from customers
+where cust_gender='F' and cust_salary>200000000 and cust_country="Ethiopia";
+8.select * cusomers
+where cust_country= "Ethiopia" or cust_country="Uzbekistan";
+9. select min(cust_salary) from customers;
+10.select max(cust_salarty) from customers;
+11.select count(Cust_ID) from customers;
+   select count(*) from customers;
+12. select avg(cust_salary) from customers;
+13.select sum(cust_salary) from customers;
+14.select * from customers
+where cust_salary  between 2000000 and 8000000;
+15. select *from customers
+where cust_ firstname like '-s%';
+16.select *from customers
+where cust_ firstname like '-e%'and cust_lastnam like'%e';
+18.select *from customers
+where cust_country in ('Ethiopia","USA","France")
+//Continued homework
+1. select * from mydb.Customers; 
+
+2.select * from Customers 
+where  = "Ethiopia";
+
+3.select * 
+where Cust_Salary >"5000000";
+
+4. select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where Cust_Gender = "M";
+
+5. select distinct  from Customers;
+
+6. select  Cust_FirstName, Cust_LastName, Cust_Country from Customers
+where 
+order by Cust_Country desc;
+
+7. select * from Customers 
+where Cust_Gender = "F" and  >2000000 and 
+
+8. .  select* from Customers
+where Cust_Country = "Ethiopia" or  Cust_Country = "Uzbekistan";
+ 
+ 9. select min(Cust_Salary) from Customers;
+ 
+ 10. select max(Cust_Salary) from Customers;
+ 
+ 11. select count(Cust_ID) from Customers;
+ select count(*) as no_customer from Customers;
+ 
+12.  select avg(Cust_Salary) from Customers;
+
+13. select sum(Cust_Salary) from Customers;
+
+14.  select * from Customers
+where Cust_Salary between 2000000 and 8000000;
+
+15. select * from Customers
+where Cust_FirstName like 's%';
+
+16. select * from Customers
+where Cust_FirstName like '_e%' 
+and  Cust_LastName like '%e';
+
+17. select * from Customers
+where Cust_LastName like 'p%a';
+
+18. select * from Customers
+where Cust_Country in
+( "Ethiopia", "USA", "France");
+
+ ---//
+ create database MyDB;
+
+use mydb;
+
+create table customers(
+Cust_ID int auto_increment not null,
+Cust_FirstName varchar(255) not null,
+Cust_LastName varchar(255) not null,
+Cust_NickName varchar(255),
+Cust_Age int,
+Cust_Gender char(1) not null,
+Cust_Country varchar(255) not null,
+Cust_Salary dec not null,
+primary key (Cust_ID)
+);
+
+alter table customers
+add column bonus int not null;
+ 
+alter table customers
+modify Cust_Age int not null;
+
+alter table customers
+drop Cust_NickName;
+
+alter table customers
+drop bonus;
+
+rename table 
+customers to customer;
+
+drop table customer;
+
+drop database MyDB;
+
+create database MyDB;
+
+use mydb;
+
+create table customers(
+Cust_ID int auto_increment not null,
+Cust_FirstName varchar(255) not null,
+Cust_LastName varchar(255) not null,
+Cust_NickName varchar(255),
+Cust_Age int,
+Cust_Gender char(1) not null,
+Cust_Country varchar(255) not null,
+Cust_Salary dec not null,
+primary key (Cust_ID)
+);
+
+insert into customers (Cust_ID, Cust_FirstName, Cust_LastName, Cust_Age,  Cust_Gender, Cust_Country, Cust_Salary)
+values (111, "Nick", "Jones", 26, "M", "USA", 20000000),
+(222, "Antony", "Martial", 24, "M", "France", 10000000),
+(333, "Nebiha", "Amir", 24, "F", "Uzbekistan",36000000),
+(444, "Soresa", "Hailu", 24, "M", "Unknown", 34000000),
+(555, "Beka", "Haile", 25, "M", "Kazakhstan", 400000),
+(999, "Nick", "Jones", 26, "M", "USA", 20000000),
+(777, "Poul", "Pogba", 26, "M", "France",20000000),
+(888, "Betty", "G", 27, "F", "Ethiopia", 70000000);
+
+update customers
+set  Cust_Country="Ethiopia"
+where Cust_ID in
+(333,444,555);
+
+
+delete from Customers
+where Cust_ID= 666;
+ 
+
+
+
