@@ -1,0 +1,49 @@
+1. select * from mydb.customers;
+use mydb;
+
+2. select * from customers
+where cust_country='Ethiopia';
+
+3. select * from customers
+where cust_salary > '5000000';
+
+4. select cust_fName,cust_lName,cust_lName
+from customers
+where cust_gender='m'; 
+
+5.select distinct cust_country from customers;
+6. select cust_fName,cust_lName,cust_country
+       from customers where cust_gender='f'
+       order by cust_country desc;
+7. select * from customers
+where cus. select * from mydb.customers;
+use mydb;
+
+2. select * from customers
+where cust_country='Ethiopia';
+
+3. select * from customers
+where cust_salary > '5000000';
+
+4. select cust_fName,cust_lName,cust_lName
+from customers
+wheret_gender='F'and cust_salary >'200000'and cust_country='Ethiopia';
+8. select* from customers
+  where cust_country='ethiopia'or cust_country= 'uzbekistan';
+9. select min(cust_salary)from customers ;
+10. select max(cust_salary) from customers;
+use mydb
+ 11. select count(cust_Id)as no_cust from customers;
+ 12. select avg(cust_salary)from customers;
+ 13. select sum(cust_salary)from customers;
+ 14. select* from customers 
+ where cust_salary between 200000 and 800000
+ 15.select*from customers
+     where cust_fName like 's%' 
+16. select *from customers 
+where cust_fName like '-e%'and cust_lName like'%e'
+17. select * from customers
+where cust_lName like 'p%a'
+18. select *from customers
+where cust_country in ('Ethiopia','USA','France');
+*/
