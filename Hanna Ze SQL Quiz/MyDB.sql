@@ -133,9 +133,81 @@ select * from customer_table
 where cust_country in ('Ethiopia','USA','France');
 
 
+-- creating table named Address
+
+Create table Address(
+Cust_ZIP varchar(250) not null ,
+Cust_Street Varchar(250) not null,
+Cust_City Varchar(50) not null,
+Cust_State Varchar(50),
+Cust_ID int,
+Primary Key (Cust_ZIP),
+Foreign key(Cust_ID) references Customer_table(Cust_ID)
+);
+
+Insert into Address
+Values(1000, 'Megenagn', 'Addis Ababa', 'Addis Ababa', 444),
+(2000,'4-Kilo', 'Addis Ababa', 'Addis Ababa', 555),
+(3000,'41-Eyesus', 'Addis Ababa', 'Addis Ababa', 888),
+(4000,'6-Kilo', 'Addis Ababa', 'Addis Ababa', 333),
+(5000,'01-St', 'San Diego', 'California', null),
+(6000,'kU-road', 'Los Angeles', 'California', null),
+(7000,'JK-road', 'Miami', 'Florida', null),
+(8000,'Lj-road', 'Atlanta', 'Georgia', null);
+
+
+---- inner join
+
+Select * from Customer_table;
+
+Select * from Address;
+
+Select * from Customer_table  inner join Address on Customer_table.Cust_ID = Address.Cust_ID;
+
+Select * 
+from Customer_table as CS 
+inner join Address Ad  on CS.Cust_ID = AD.Cust_ID;
+
+Select CS.Cust_FirstName, CS.Cust_LastName, AD.Cust_State, CS.Cust_Salary
+from Customer_table as CS 
+inner join Address Ad  on CS.Cust_ID = AD.Cust_ID;
+
+/*Select CS. * , AD.Cust_State
+from Customer_table as  CS  
+left outer join Address Ad  on CS.Cust_ID = AD.Cust_ID
+Where AD.Cust_State = ‘Georgia’;/*
+
+/*Select CS. * , AD.Cust_State
+from Customer_table as  CS  
+inner join Address Ad  on CS.Cust_ID = AD.Cust_ID
+Where AD.Cust_State = ‘Georgia’;/*
 
 
 
+--- left join
+
+Select * from Customer_table left outer join Address on Customer_table.Cust_ID = address.Cust_ID;
+
+Select * 
+from Customer_table as  CS  
+left outer join Address Ad  on CS.Cust_id = AD.Cust_ID;
+
+--- right join.
+
+Select * from Customer_table right outer  join Address on Customer_table.cust_id = address.Cust_ID;
+
+Select * 
+from Customer_table as  CS  
+right outer join Address Ad  on CS.cust_id = AD.Cust_ID;
+
+
+
+--- full join( not supported by MySQL)
+
+Select * from Customer_table full join Address on Customer_table.Cust_ID = address.Cust_ID;
+
+
+ 
 
 
 
