@@ -172,23 +172,16 @@ Select CS.Cust_FirstName, CS.Cust_LastName, AD.Cust_State, CS.Cust_Salary
 from Customer_table as CS 
 inner join Address Ad  on CS.Cust_ID = AD.Cust_ID;
 
-/*Select CS. * , AD.Cust_State
-from Customer_table as  CS  
-left outer join Address Ad  on CS.Cust_ID = AD.Cust_ID
-Where AD.Cust_State = ‘Georgia’;/*
-
-/*Select CS. * , AD.Cust_State
-from Customer_table as  CS  
-inner join Address Ad  on CS.Cust_ID = AD.Cust_ID
-Where AD.Cust_State = ‘Georgia’;/*
-
-
 
 --- left join
 
 Select * from Customer_table left outer join Address on Customer_table.Cust_ID = address.Cust_ID;
 
 Select * 
+from Customer_table as  CS  
+left outer join Address Ad  on CS.Cust_id = AD.Cust_ID;
+
+Select  CS.Cust_ID, CS.cust_FirstName, CS.cust_LastName, AD.Cust_State
 from Customer_table as  CS  
 left outer join Address Ad  on CS.Cust_id = AD.Cust_ID;
 
@@ -199,6 +192,10 @@ Select * from Customer_table right outer  join Address on Customer_table.cust_id
 Select * 
 from Customer_table as  CS  
 right outer join Address Ad  on CS.cust_id = AD.Cust_ID;
+
+Select  CS.Cust_ID, CS.cust_FirstName, CS.cust_LastName, AD.Cust_State
+from Customer_table as  CS  
+right outer join Address Ad  on CS.Cust_id = AD.Cust_ID;
 
 
 
