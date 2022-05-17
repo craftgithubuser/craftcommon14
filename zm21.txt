@@ -1,2 +1,25 @@
-CODE43
-hello
+
+Localvariabledemo
+package com.package2;
+
+public class Localvariabledemo {
+
+	public  void methodOne() {
+		int i = 10; // local variable
+		System.out.println("the value of i:" + i);
+	
+		
+		
+	}
+	public  void methodTwo() {
+		int k = 20; // local variable
+	//	System.out.println("the value of i:" + i);
+		System.out.println("the value of k:" + k);
+	}
+		public static void main(String[] args) {
+		
+		
+			Localvariabledemo m1= new Localvariabledemo();
+		m1.methodOne();
+		m1.methodTwo();
+		
