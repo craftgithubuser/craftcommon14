@@ -1,0 +1,136 @@
+import java.util.Scanner;
+
+public class Javahomework
+{
+    public static void main(String[] args)
+    {
+        Scanner ayu=new Scanner(System.in);
+        int size;    //Array Size Declaration
+        System.out.println("Enter the size of elements :");
+        size=ayu.nextInt();    //Array Size Initialization
+        
+        int geni[]=new int[size];    //Array Declaration
+        System.out.println("Enter the elements of the array :");
+        for(int i=0;i<size;i++)     //Array Initialization
+        {
+            geni[i]=ayu.nextInt();
+        }
+        
+        int simon = 0;    // Simon temporary variable to store the element
+        
+         for (int i = 0; i < geni.length; i++)   //Holds each Array element
+         {     
+            for (int j = i+1; j < geni.length; j++)    //compares with remaining Array elements
+            {     
+               if(geni[i] < geni[j]) //  Compare and swap
+               {    
+                   simon = geni[i];    
+                   geni[i] = geni[j];    
+                   geni[j] = simon;    
+               }     
+            }     
+        }    
+          
+        System.out.println();    
+            
+        //Displaying elements of array after sorting    
+        System.out.println("Elements of array sorted in descending order: ");    
+        for (int i = 0; i < geni.length; i++) 
+        {     
+            System.out.print(geni[i] + " ");    
+        }    
+    }
+}
+
+
+
+
+
+
+/*THE SAME PROGRAM
+
+*/ WITH THE GIVEN METHODS 
+
+
+
+
+
+package homework;
+
+import java.util.Scanner;
+
+
+public class Sortingarrays {
+	//private static final int intigers = 0;
+	static int size;
+	static int geni[]=new int[size];
+	
+public static void main(String[] args)
+{
+	getIntigers();
+	sortIntigers();
+		printArray();
+	    }
+	
+	
+	public static int[] getIntigers()
+	{
+		
+	Scanner ayu=new Scanner(System.in);
+		        
+		        System.out.println("Enter the size of the array :");
+		        size=ayu.nextInt();    //Array Size Initialization
+		        int geni[] =new int[size];
+		        System.out.println("Enter the elements of the array :");
+		        for(int i=0;i<geni.length;i++)     //Array Initialization
+		        {
+		        	 geni[i]=ayu.nextInt();
+		        }
+		        
+	            //geni[i]=ayu.nextInt();
+		      //
+		        //System.out.println("Enter the elements of the array :");
+		      ayu.close();
+		      return geni;
+	}
+		      
+	
+	
+		        //sortIntegers
+		        public static int[] sortIntigers() {
+		        	//int size=1;
+		        	//int geni[]=new int[size];
+		        	
+		        int simon = 0;    // simon is Temporary variable to store the element
+		        
+		         for (int i = 0; i < geni.length; i++)   //Holds each Array element
+		         {     
+		            for (int j = i+1; j < geni.length; j++)    //compares with remaining Array elements
+		            {     
+		               if(geni[i] < geni[j]) //Compare and swap
+		               {    
+		                   simon = geni[i];    
+		                   geni[i] = geni[j];    
+		                   geni[j] = simon;    
+		               }     
+		            }     
+		        }  
+		         
+		        System.out.println(); 
+		        return geni; 
+	}
+	
+	public static int[] printArray() {
+		//int size=1;
+    	//int geni[]=new int[size];
+		        //Displaying elements of array after sorting    
+		        System.out.println("Elements of array sorted in descending order: ");    
+		        for (int i = 0; i < geni.length; i++) 
+		        {     
+		            System.out.print(geni[i] + " ");    
+		        }    
+		        return geni;
+		    }
+		
+
+	}

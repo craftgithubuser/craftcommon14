@@ -1,0 +1,196 @@
+a/
+
+package com;
+
+import java.util.Scanner;
+
+public class Exersice6 {
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//	Convert the following switch statement into if-else statements:
+		//String dayString1, dayString2, dayString3;
+		
+		       //package exersice;
+
+					//import java.util.Scanner;
+
+					//public class Exersice5 {
+
+					 // public static void main(String[] args) {
+					  
+					    Scanner in = new Scanner(System.in);
+					    
+					    System.out.println("Enter your grade: " );
+					    
+					    String grade = in.nextLine();
+					    
+					    if(grade.equals ("A+") )
+					    
+					      { System.out.println(grade = "Highest honors" );}
+					    
+					    else if (grade.equals("A-"))
+					    { System.out.println(grade = "Honors"); }
+					    
+					    else if (grade.equals ( "A"))
+					     { System.out.println(grade = "Honors"); }
+					      
+					    else if (grade.equals ("B+"))
+					      { System.out.println(grade = "Favorable Mention"); }
+					      
+					    else if (grade.equals("B"))
+					    { System.out.println(grade = "Favorable Mention"); }
+					    
+					    else { System.out.println("Invalid");}
+					    
+					  
+
+					    
+					      
+					  }
+					  
+		
+
+	}
+   
+
+b/
+package com.quiz123;
+
+import java.util.Scanner;
+
+public class Quize2 {
+
+	private static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+    System.out.println("Enter count:");
+	    int count = scanner.nextInt();
+    scanner.nextLine();
+    int[] returnedArray = readIntegers(count);	  
+	System.out.println("Min: " + findMin(returnedArray));
+	}
+	private static int[] readIntegers(int count) { //parameter called count created
+	    int[] array = new int[count];
+    for (int i = 0; i < array.length; i++) {
+	        System.out.println("Enter a number:");
+	        int number = scanner.nextInt();
+	        scanner.nextLine();
+	        array[i] = number;
+    }
+    return array;
+	}
+private static int findMin(int[] array) {
+	    int min = Integer.MAX_VALUE;
+	    for (int i = 0; i < array.length; i++) {
+	        int value = array[i];
+	        if (value < min) {
+	            min = value;
+	        }
+    }
+	    return min;
+}
+}
+	
+
+
+
+
+	//	
+//		-Write a method called readIntegers() with a parameter called count that represents
+//		how many integers the user needs to enter.
+//		-The method needs to read from the console until all the numbers are entered, and then
+//		return an array containing the numbers entered.
+//		-Write a method findMin() with the array as a parameter. The method needs to return
+//		the minimum value in the array.
+//		-In the main() method read the count from the console and call the method
+//		readIntegers() with the count parameter.
+//		-Then call the findMin() method passing the array returned from the call to the
+//		readIntegers() method.
+//		-Finally, print the minimum element in the array.
+//		Tips:
+//		-Assume that the user will only enter numbers, never letters
+//		-For simplicity, create a Scanner as a static field to help with data input
+//		-Create a new console project with the name ‘MinElementChallenge’
+		
+
+//private static Scanner scanner = new Scanner(System.in);
+//
+//public static void main(String[] args) {
+//    System.out.println("Enter count:");
+//    int count = scanner.nextInt();
+//    scanner.nextLine();
+//    int[] returnedArray = readIntegers(count);
+//    System.out.println("Min: " + findMin(returnedArray));
+//}
+//private static int[] readIntegers(int count) { //parameter called count created
+//    int[] array = new int[count];
+//    for (int i = 0; i < array.length; i++) {
+//        System.out.println("Enter a number:");
+//        int number = scanner.nextInt();
+//        scanner.nextLine();
+//        array[i] = number;
+//    }
+//    return array;
+//}
+//private static int findMin(int[] array) {
+//    int min = Integer.MAX_VALUE;
+//    for (int i = 0; i < array.length; i++) {
+//        int value = array[i];
+//        if (value < min) {
+//            min = value;
+//        }
+//    }
+//    return min;
+//}
+//}
+//
+//
+
+	
+
+c/
+
+
+package com.quiz123;
+
+import java.util.Arrays;
+
+public class Quize3 {
+
+	public static void main(String[] args) {
+		int[] array = new int[] {1,2,3,4,5};
+		System.out.println("non reversed array: ");
+		for(int i=0; i<array.length; i++) {
+			System.out.print(array[i]+" ");
+					
+		}
+		
+		System.out.println();
+		System.out.println("Reversed array: ");
+		for(int i=array.length-1; i>=0; i--) {
+			System.out.print(array[i] + " ");
+		}
+		
+	}
+}
+		
+
+
+
+//-Write a method called reverse() with an int array as a parameter.
+//-The method should not return any value. In other words, the method is allowed to
+//modify the array parameter.
+//
+//-In main() test the reverse() method and print the array both reversed and non-
+//reversed.
+//
+//-To reverse the array, you have to swap the elements, so that the first element is
+//swapped with the last element and so on.
+//-For example, if the array is {1, 2, 3, 4, 5}, then the reversed array is {5, 4, 3, 2,
+//1}.
+//
+//Tip:
+//-Create a new console project with thce name ‘ReverseArrayChallenge’
+
+
