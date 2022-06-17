@@ -1,0 +1,38 @@
+package javaQuizes;
+
+import java.util.Scanner;
+
+public class JavaQuize2 {
+
+	
+		private static Scanner scanner = new Scanner(System.in);
+
+	    public static void main(String[] args) {
+	        System.out.println("Enter count:");
+	        int count = scanner.nextInt();
+	        scanner.nextLine();
+	        int[] returnedArray = readIntegers(count);
+	        System.out.println("Min: " + findMin(returnedArray));
+	    }
+	    private static int[] readIntegers(int count) { //count parameter created
+	        int[] array = new int[count]; // initializing array
+	        for (int i = 0; i < array.length; i++) {
+	            System.out.println("Enter a number:");
+	            int number = scanner.nextInt(); // get array values from the scanner
+	            scanner.nextLine();
+	            array[i] = number;
+	        }
+	        return array;
+	    }
+	    private static int findMin(int[] array) {  // compare values and max number values
+	        int min = Integer.MAX_VALUE;
+	        for (int i = 0; i < array.length; i++) {
+	            int value = array[i];
+	            if (value < min) {
+	                min = value;
+	            }
+	        }
+	        return min;
+	    }
+	
+	}
