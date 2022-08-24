@@ -1,0 +1,14 @@
+{
+  "name": "support22",
+  "version": "1.0.0",
+  "description": "To test shop icraftsoft using Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Selam W",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  }
+}
